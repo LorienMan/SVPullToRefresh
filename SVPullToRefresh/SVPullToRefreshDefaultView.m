@@ -330,7 +330,7 @@ static CGFloat const SVPullToRefreshViewHeight = 60;
         alphaGradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)alphaGradientColors, alphaGradientLocations);
     }else{
         const CGFloat * components = CGColorGetComponents([self.arrowColor CGColor]);
-        int numComponents = CGColorGetNumberOfComponents([self.arrowColor CGColor]);
+        unsigned long numComponents = CGColorGetNumberOfComponents([self.arrowColor CGColor]);
         CGFloat colors[8];
         switch(numComponents){
             case 2:{
